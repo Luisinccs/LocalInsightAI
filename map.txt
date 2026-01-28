@@ -1,0 +1,38 @@
+LocalInsightAI/
+│
+├── CMakeLists.txt              # Configuración global de compilación
+│
+├── include/                    # Archivos de Cabecera (.hpp / .h)
+│   ├── bridge/
+│   │   └── LocalInsightBridge.h # Interfaz C pura para Swift y C#
+│   ├── core/
+│   │   ├── AIEngine.hpp        # Orquestador lógico (Clase principal)
+│   │   └── ContextManager.hpp  # Gestión de memoria de conversación
+│   ├── inference/
+│   │   ├── IInferenceProvider.hpp # Interfaz abstracta para modelos
+│   │   └── GemmaProvider.hpp   # Implementación específica para Gemma 3
+│   └── utils/
+│       ├── Logger.hpp          # Sistema de logs para depuración
+│       └── FileSystem.hpp      # Helpers para rutas multiplataforma
+│
+├── src/                        # Código Fuente (.cpp)
+│   ├── bridge/
+│   │   └── LocalInsightBridge.cpp # Implementación de la exportación C
+│   ├── core/
+│   │   ├── AIEngine.cpp
+│   │   └── ContextManager.cpp
+│   ├── inference/
+│   │   └── GemmaProvider.cpp   # Integración con llama.cpp / Gemma
+│   ├── utils/
+│   │   └── FileSystem.cpp
+│   └── main.cpp                # App de consola para pruebas y piloto
+│
+├── models/                     # Modelos Binarios
+│   └── gemma-3-27b-q4.gguf     # El modelo de Google (no se genera, se descarga)
+│
+├── scripts/                    # Automatización
+│   ├── setup_folders.sh        # Script para crear esta estructura en Mac/Linux
+│   └── setup_folders.bat       # Script para crear esta estructura en Windows
+│
+└── tests/                      # Pruebas Unitarias
+    └── CoreTests.cpp           # Verificación de lógica de inferencia

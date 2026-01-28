@@ -1,0 +1,42 @@
+# 2026-01-27 - LocalInsight AI Build System
+cmake_minimum_required(VERSION 3.20)
+project(LocalInsightAI VERSION 1.0.0 LANGUAGES CXX)
+
+# Estandar C++20 requerido
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Directorios de cabeceras
+include_directories(include)
+
+# Lista de archivos fuente del Core
+set(CORE_SOURCES
+    src/core/AIEngine.cpp
+    src/core/ContextManager.cpp
+    src/inference/GemmaProvider.cpp
+    src/utils/FileSystem.cpp
+    src/utils/Logger.cpp
+)
+
+# 1. OBJETIVO: Libreria Compartida (Para Swift y C#)
+add_library(LocalInsightCore SHARED 
+    ${CORE_SOURCES}
+    src/bridge/LocalInsightBridge.cpp
+)
+
+# 2. OBJETIVO: Ejecutable de Pruebas (Consola)
+add_executable(LocalInsightTest 
+    ${CORE_SOURCES}
+    src/main.cpp
+)
+
+# Configuracion especifica para Windows (DLL)
+if(WIN32)
+    set_target_properties(LocalInsightCore PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+        LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    )
+endif()
+
+# Mensaje de exito al configurar
+message(STATUS "LocalInsight AI configured for ${CMAKE_SYSTEM_NAME}")

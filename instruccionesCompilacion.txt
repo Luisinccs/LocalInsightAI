@@ -1,0 +1,8 @@
+Instrucciones para compilar en VS Code
+Extensiones: Asegúrate de tener instalada la extensión "CMake Tools".
+
+Configurar: VS Code detectará el archivo automáticamente. Selecciona tu compilador (Kit) en la barra inferior (ej. MSVC en Windows o Clang en Mac).
+
+Build: Presiona F7 o el botón "Build".
+
+Ejecutar Test: Para probar el main.cpp, selecciona el target LocalInsightTest y presiona el icono de "Play".
