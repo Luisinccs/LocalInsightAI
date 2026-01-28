@@ -1,41 +1,35 @@
-# Prerequisites
-*.d
+# --- LocalInsight AI GitIgnore ---
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
+# Compilacion y Binarios
+build/
+bin/
+obj/
+*.exe
+*.dll
+*.dylib
+*.so
+*.lib
 *.pdb
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Modelos de IA (PESADOS - No subir a GitHub)
+models/*.gguf
+models/*.bin
+models/*.onnx
 
-# Fortran module files
-*.mod
-*.smod
+# IDEs y Herramientas
+.vscode/
+.vs/
+*.user
+*.suo
+.DS_Store (Mac)
+CMakeSettings.json
+out/
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Logs y Datos temporales
+data/logs/
+*.log
+temp/
 
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+# Dependencias de paquetes
+vcpkg_installed/
+node_modules/
