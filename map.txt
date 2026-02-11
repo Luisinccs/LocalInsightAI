@@ -29,10 +29,9 @@ LocalInsightAI/
 │
 ├── models/                     # Modelos Binarios
 │   └── gemma-3-27b-q4.gguf     # El modelo de Google (no se genera, se descarga)
-│
-├── scripts/                    # Automatización
-│   ├── setup_folders.sh        # Script para crear esta estructura en Mac/Linux
-│   └── setup_folders.bat       # Script para crear esta estructura en Windows
-│
+└── clients/           # Proyectos de Interfaz
+    ├── macos-appkit/  # Proyecto de Xcode (Swift + AppKit) <-- AQUÍ
+    └── windows-csharp/# Proyecto de VS (C#)
+
 └── tests/                      # Pruebas Unitarias
     └── CoreTests.cpp           # Verificación de lógica de inferencia

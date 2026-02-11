@@ -8,50 +8,53 @@
 #include "core/ContextManager.hpp"
 #include <sstream>
 
-namespace LocalInsight::Core;
+namespace LocalInsight::Core {
 
-/**
- * @brief Constructor con inicializacion de limites.
- */
-ContextManager::ContextManager(size_t maxEntries) {
-    _maxHistorySize = maxEntries;
-}
-
-/**
- * @brief Agrega mensajes y mantiene el tamaño del buffer (FIFO).
- */
-void ContextManager::addMessage(const std::string& role, const std::string& message) {
-    // Si excedemos el limite, eliminamos el mensaje mas antiguo (el primero)
-    if (_history.size() >= _maxHistorySize) {
-        _history.erase(_history.begin());
+    /**
+     * @brief Constructor con inicializacion de limites.
+     */
+    ContextManager::ContextManager(size_t maxEntries) {
+        _maxHistorySize = maxEntries;
     }
 
-    _history.push_back({role, message});
-}
+    /**
+     * @brief Agrega mensajes y mantiene el tamaño del buffer (FIFO).
+     */
+    void ContextManager::addMessage(const std::string &role, const std::string &message) {
+        // Si excedemos el limite, eliminamos el mensaje mas antiguo (el primero)
+        if (_history.size() >= _maxHistorySize) {
+            _history.erase(_history.begin());
+        }
 
-/**
- * @brief Aplica el formato de plantilla (Prompt Template) de Gemma 3.
- */
-std::string ContextManager::getFormattedPrompt() const {
-    std::stringstream prompt;
-
-    for (const auto& msg : _history) {
-        // Formato estandar para Gemma: <start_of_turn>role\ncontent<end_of_turn>
-        prompt << "<start_of_turn>" << msg.role << "\n" 
-               << msg.content << "<end_of_turn>\n";
+        _history.push_back({role, message});
     }
 
-    // Añadimos el disparador final para que el modelo responda
-    prompt << "<start_of_turn>model\n";
+    /**
+     * @brief Aplica el formato de plantilla (Prompt Template) de Gemma 3.
+     */
+    std::string ContextManager::getFormattedPrompt() const {
+        std::stringstream prompt;
 
-    return prompt.str();
-}
+        for (const auto &msg : _history) {
+            // Formato estandar para Gemma: <start_of_turn>role\ncontent<end_of_turn>
+            prompt << "<start_of_turn>" << msg.role << "\n"
+                   << msg.content << "<end_of_turn>\n";
+        }
 
-/**
- * @brief Resetea el historial de la sesion.
- */
-void ContextManager::clearHistory() {
-    _history.clear();
+        // Añadimos el disparador final para que el modelo responda
+        prompt << "<start_of_turn>model\n";
+
+        return prompt.str();
+    }
+
+    /**
+     * @brief Resetea el historial de la sesion.
+     */
+    void ContextManager::clearHistory()
+    {
+        _history.clear();
+    }
+
 }
 
 /*

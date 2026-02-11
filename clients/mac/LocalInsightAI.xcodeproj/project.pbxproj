@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11443FC42F2A9E5900E5F065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11443FC32F2A9E5900E5F065 /* AppDelegate.swift */; };
+		11443FC62F2A9E5900E5F065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11443FC52F2A9E5900E5F065 /* ViewController.swift */; };
+		11443FC82F2A9E5B00E5F065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11443FC72F2A9E5B00E5F065 /* Assets.xcassets */; };
+		119C12E22F2A9EE2005CE0D9 /* LocalInsightBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C12E12F2A9EE2005CE0D9 /* LocalInsightBridge.swift */; };
+		119C12E52F2A9F55005CE0D9 /* libLocalInsightCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 119C12E42F2A9F55005CE0D9 /* libLocalInsightCore.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		119C12E92F2AA25D005CE0D9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C12E82F2AA25D005CE0D9 /* main.swift */; };
+		119C12EA2F2AA3E7005CE0D9 /* libLocalInsightCore.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 119C12E42F2A9F55005CE0D9 /* libLocalInsightCore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		119C12EB2F2AA3E7005CE0D9 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				119C12EA2F2AA3E7005CE0D9 /* libLocalInsightCore.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		11443FC02F2A9E5900E5F065 /* LocalInsightAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalInsightAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11443FC32F2A9E5900E5F065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11443FC52F2A9E5900E5F065 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11443FC72F2A9E5B00E5F065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11443FCC2F2A9E5B00E5F065 /* LocalInsightAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocalInsightAI.entitlements; sourceTree = "<group>"; };
+		119C12E12F2A9EE2005CE0D9 /* LocalInsightBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInsightBridge.swift; sourceTree = "<group>"; };
+		119C12E42F2A9F55005CE0D9 /* libLocalInsightCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLocalInsightCore.dylib; path = ../../build/libLocalInsightCore.dylib; sourceTree = "<group>"; };
+		119C12E62F2A9FCB005CE0D9 /* LocalInsightBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalInsightBridge.h; path = ../../../include/bridge/LocalInsightBridge.h; sourceTree = "<group>"; };
+		119C12E72F2AA07D005CE0D9 /* LocalInsightAI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalInsightAI-Bridging-Header.h"; sourceTree = "<group>"; };
+		119C12E82F2AA25D005CE0D9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11443FBD2F2A9E5900E5F065 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119C12E52F2A9F55005CE0D9 /* libLocalInsightCore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11443FB72F2A9E5900E5F065 = {
+			isa = PBXGroup;
+			children = (
+				11443FC22F2A9E5900E5F065 /* LocalInsightAI */,
+				11443FC12F2A9E5900E5F065 /* Products */,
+				119C12E32F2A9F55005CE0D9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		11443FC12F2A9E5900E5F065 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11443FC02F2A9E5900E5F065 /* LocalInsightAI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11443FC22F2A9E5900E5F065 /* LocalInsightAI */ = {
+			isa = PBXGroup;
+			children = (
+				119C12E62F2A9FCB005CE0D9 /* LocalInsightBridge.h */,
+				11443FC32F2A9E5900E5F065 /* AppDelegate.swift */,
+				11443FC52F2A9E5900E5F065 /* ViewController.swift */,
+				11443FC72F2A9E5B00E5F065 /* Assets.xcassets */,
+				11443FCC2F2A9E5B00E5F065 /* LocalInsightAI.entitlements */,
+				119C12E12F2A9EE2005CE0D9 /* LocalInsightBridge.swift */,
+				119C12E72F2AA07D005CE0D9 /* LocalInsightAI-Bridging-Header.h */,
+				119C12E82F2AA25D005CE0D9 /* main.swift */,
+			);
+			path = LocalInsightAI;
+			sourceTree = "<group>";
+		};
+		119C12E32F2A9F55005CE0D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119C12E42F2A9F55005CE0D9 /* libLocalInsightCore.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11443FBF2F2A9E5900E5F065 /* LocalInsightAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11443FCF2F2A9E5B00E5F065 /* Build configuration list for PBXNativeTarget "LocalInsightAI" */;
+			buildPhases = (
+				11443FBC2F2A9E5900E5F065 /* Sources */,
+				11443FBD2F2A9E5900E5F065 /* Frameworks */,
+				11443FBE2F2A9E5900E5F065 /* Resources */,
+				119C12EB2F2AA3E7005CE0D9 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalInsightAI;
+			productName = LocalInsightAI;
+			productReference = 11443FC02F2A9E5900E5F065 /* LocalInsightAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11443FB82F2A9E5900E5F065 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					11443FBF2F2A9E5900E5F065 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 11443FBB2F2A9E5900E5F065 /* Build configuration list for PBXProject "LocalInsightAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11443FB72F2A9E5900E5F065;
+			productRefGroup = 11443FC12F2A9E5900E5F065 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11443FBF2F2A9E5900E5F065 /* LocalInsightAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11443FBE2F2A9E5900E5F065 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11443FC82F2A9E5B00E5F065 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11443FBC2F2A9E5900E5F065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11443FC62F2A9E5900E5F065 /* ViewController.swift in Sources */,
+				119C12E22F2A9EE2005CE0D9 /* LocalInsightBridge.swift in Sources */,
+				119C12E92F2AA25D005CE0D9 /* main.swift in Sources */,
+				11443FC42F2A9E5900E5F065 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		11443FCD2F2A9E5B00E5F065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11443FCE2F2A9E5B00E5F065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		11443FD02F2A9E5B00E5F065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LocalInsightAI/LocalInsightAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8F29C4F5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../build\"";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dandrealuisdeveloper.LocalInsightAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/../../include/bridge/LocalInsightBridge.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		11443FD12F2A9E5B00E5F065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LocalInsightAI/LocalInsightAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q8F29C4F5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../build\"";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dandrealuisdeveloper.LocalInsightAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/../../include/bridge/LocalInsightBridge.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11443FBB2F2A9E5900E5F065 /* Build configuration list for PBXProject "LocalInsightAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11443FCD2F2A9E5B00E5F065 /* Debug */,
+				11443FCE2F2A9E5B00E5F065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11443FCF2F2A9E5B00E5F065 /* Build configuration list for PBXNativeTarget "LocalInsightAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11443FD02F2A9E5B00E5F065 /* Debug */,
+				11443FD12F2A9E5B00E5F065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11443FB82F2A9E5900E5F065 /* Project object */;
+}

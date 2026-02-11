@@ -10,7 +10,7 @@
 #include <iomanip>
 #include <iostream>
 
-namespace LocalInsight::Utils;
+namespace LocalInsight::Utils {
 
 // Inicializacion del miembro estatico (mutex)
 std::mutex Logger::_logMutex;
@@ -42,6 +42,8 @@ std::string Logger::levelToString(LogLevel level) {
         case LogLevel::Error:   return "ERROR";
         default:                return "UNKNOWN";
     }
+}
+
 }
 
 /*

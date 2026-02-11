@@ -9,7 +9,7 @@
 #include "utils/FileSystem.hpp"
 #include "utils/Logger.hpp"
 
-namespace LocalInsight::Core;
+namespace LocalInsight::Core { 
 
 using namespace LocalInsight::Utils;
 
@@ -66,6 +66,8 @@ std::string AIEngine::ask(const std::string& prompt) {
  */
 bool AIEngine::validateModelPath(const std::string& path) {
     return FileSystem::exists(path) && FileSystem::isValidModelExtension(path);
+}
+
 }
 
 /*

@@ -20,8 +20,8 @@ namespace LocalInsight::Inference {
 class GemmaProvider : public IInferenceProvider {
 private:
     bool _isModelLoaded; ///< Indica si los pesos estan en memoria
-    void* _ctx; ///< Puntero al contexto interno del backend (ej. llama_context)
-    void* _model; ///< Puntero al modelo cargado (ej. llama_model)
+    struct llama_context* _ctx; ///< Puntero al contexto interno del backend (ej. llama_context)
+    struct llama_model* _model; ///< Puntero al modelo cargado (ej. llama_model)
 
     /**
      * @brief Configura los parametros de hardware (Hilos CPU / Backend GPU).

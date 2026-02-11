@@ -8,7 +8,7 @@
 #include "utils/FileSystem.hpp"
 #include <algorithm>
 
-namespace LocalInsight::Utils;
+namespace LocalInsight::Utils {
 
 /**
  * @brief Verifica la existencia fisica de un archivo o carpeta.
@@ -45,6 +45,8 @@ bool FileSystem::isValidModelExtension(const std::string& path) {
     });
 
     return (ext == ".gguf" || ext == ".bin");
+}
+
 }
 
 /*
